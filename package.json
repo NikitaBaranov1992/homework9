@@ -1,0 +1,22 @@
+{
+  "name": "yes",
+  "version": "1.0.0",
+  "description": "test9 for lesson",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NikitaBaranov1992/test9.git"
+  },
+  "author": "Nikita Baranov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NikitaBaranov1992/test9/issues"
+  },
+  "homepage": "https://github.com/NikitaBaranov1992/test9#readme",
+  "dependencies": {
+    "jest": "^29.5.0"
+  }
+}

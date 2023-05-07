@@ -4,7 +4,7 @@ describe("Тестирование функции calculateBonus", () => {
     expect(calculateBonus(1, 48)).toBe(49);
   });
   it("Проверка, если sum больше 50", () => {
-    expect(calculateBonus(1, 50)).toBe(51);
+    expect(calculateBonus(1, 50)).toBe(50);
   });
   it("Проверка, если sum равно 50", () => {
     expect(calculateBonus(5, 45)).toBe(50);

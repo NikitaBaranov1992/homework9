@@ -1,45 +1,39 @@
-let students = [
-  { name: "Ivan", score: 36, date: "2022-10-11" },
-  { name: "Maria", score: 5, date: "2022-10-10" },
-  { name: "Olga", score: 0, date: "" },
-  { name: "Stepan", score: 35, date: "2022-10-12" },
-  { name: "Oleg", score: 9, date: "2022-10-01" },
-  { name: "Zanna", score: 15, date: "2022-10-11" },
+const students = [
+  [
+    { name: "Ivan", score: 35, date: "2022-10-11" },
+    { name: "Maria", score: 5, date: "2022-10-10" },
+    { name: "Olga", score: 0, date: "" },
+    { name: "Stepan", score: 35, date: "2022-10-12" },
+    { name: "Oleg", score: 9, date: "2022-10-01" },
+    { name: "Zanna", score: 15, date: "2022-10-11" },
+  ],
+  [
+    { name: "Margo", score: 0, date: "2022-10-11" },
+    { name: "Natalia", score: 25, date: "2022-10-10" },
+    { name: "Marina", score: 25, date: "2022-10-01" },
+    { name: "Dmitry", score: 25, date: "2022-10-12" },
+    { name: "Denis", score: 0, date: "2022-10-02" },
+    { name: "Vadimyr", score: 1, date: "2022-10-11" },
+  ],
+  [
+    { name: "Irina", score: 0, date: "2022-10-11" },
+    { name: "Vasily", score: 0, date: "2022-10-10" },
+    { name: "David", score: 0, date: "2022-10-11" },
+    { name: "Kristina", score: 0, date: "2022-10-12" },
+    { name: "Varvara", score: 0, date: "2022-10-01" },
+    { name: "Tanya", score: 0, date: "2022-10-11" },
+  ],
 ];
 
-let studentsScoreList = [];
+let allStud = [...students[0], ...students[1], ...students[2]];
 
-function getScore(students) {
-  for (let student of students) {
-    studentsScoreList.push(student.score);
-  }
-  return Math.max(...studentsScoreList);
-}
+let bestStudent = () => {
+  allStud.sort(
+    (a, b) => b.score - a.score || new Date(a.date) - new Date(b.date)
+  );
+  return console.log(`${allStud[0].name}, поздравляем вас! Вы молодец!`);
+};
 
-function getBestStudent(students) {
-  let bestPlayer;
-  for (let student of students) {
-    if (student.score == getScore(students)) {
-      bestPlayer = student.name;
-    }
-  }
-  return bestPlayer;
-}
+bestStudent();
 
-let x = getScore(students);
-let y = getBestStudent(students);
-
-function message(x, y) {
-  console.log(`${y}, поздравляем с первым местом! Вы набрали ${x} баллов!`);
-}
-
-message(x, y);
-
-module.exports = getScore;
-module.exports = getBestStudent;
-module.exports = message;
-
-/*Задача: студенты получают дополнительные баллы за успешное и самое быстрое завершение практической работы, 
-для этого нам необходимо вычислить данных студентов. Дан объект с набором данных разных студентов, в 
-котором необходимо вычислить студента с максимальным количеством баллов - в 
-консоли вывести поздравления для данного студента.*/
+module.exports = bestStudent;

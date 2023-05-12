@@ -1,0 +1,27 @@
+{
+	"id": "66ca38e9-c9d6-4425-86a5-0d46f4a1ba0f",
+	"values": [
+		{
+			"key": "Cookie",
+			"value": "",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "name",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "key",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		}
+	],
+	"name": "Globals",
+	"_postman_variable_scope": "globals",
+	"_postman_exported_at": "2023-05-12T15:51:03.132Z",
+	"_postman_exported_using": "Postman/10.13.7-230511-1110"
+}

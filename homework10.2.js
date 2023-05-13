@@ -31,7 +31,8 @@ let bestStudent = () => {
   allStud.sort(
     (a, b) => b.score - a.score || new Date(a.date) - new Date(b.date)
   );
-  return console.log(`${allStud[0].name}, поздравляем вас! Вы молодец!`);
+  console.log(`${allStud[0].name}, поздравляем вас! Вы молодец!`);
+  return allStud[0].name;
 };
 
 bestStudent();

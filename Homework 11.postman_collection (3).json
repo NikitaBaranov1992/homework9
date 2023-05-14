@@ -8,6 +8,51 @@
 	},
 	"item": [
 		{
+			"name": "Log in",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"4932843@gmail.com\",\r\n    \"password\": \"GoodPassword10\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{BaseURL}}api/login?redirect=%2F",
+					"host": [
+						"{{BaseURL}}api"
+					],
+					"path": [
+						"login"
+					],
+					"query": [
+						{
+							"key": "redirect",
+							"value": "%2F"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Add new box",
 			"event": [
 				{
@@ -29,13 +74,7 @@
 			],
 			"request": {
 				"method": "POST",
-				"header": [
-					{
-						"key": "Cookie",
-						"value": "{{Cookie}}",
-						"type": "text"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"email\": null,\r\n    \"name\": \"{{$randomWord}}\",\r\n    \"key\": \"{{$randomWord}}\",\r\n    \"picture\": \"santa\",\r\n    \"usePost\": false,\r\n    \"useCashLimit\": null,\r\n    \"cashLimit\": null,\r\n    \"cashLimitCurrency\": null,\r\n    \"useWish\": true,\r\n    \"useCircleDraw\": null,\r\n    \"isInviteAfterDraw\": null,\r\n    \"isArchived\": null,\r\n    \"createAdminCard\": null,\r\n    \"isCreated\": true,\r\n    \"useNames\": true,\r\n    \"isPhoneRequired\": false,\r\n    \"logo\": null\r\n}",
@@ -75,13 +114,7 @@
 			],
 			"request": {
 				"method": "PUT",
-				"header": [
-					{
-						"key": "Cookie",
-						"value": "{{Cookie}}",
-						"type": "text"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\r\n    \"email\": null,\r\n    \"name\": \"{{$randomWord}}\",\r\n    \"key\": \"{{key}}\",\r\n    \"picture\": \"cookie_star\",\r\n    \"usePost\": false,\r\n    \"useCashLimit\": false,\r\n    \"cashLimit\": null,\r\n    \"cashLimitCurrency\": null,\r\n    \"useWish\": true,\r\n    \"useCircleDraw\": null,\r\n    \"isInviteAfterDraw\": null,\r\n    \"isArchived\": null,\r\n    \"createAdminCard\": null,\r\n    \"isCreated\": null,\r\n    \"useNames\": true,\r\n    \"isPhoneRequired\": false,\r\n    \"logo\": null\r\n}",
@@ -124,13 +157,7 @@
 			],
 			"request": {
 				"method": "DELETE",
-				"header": [
-					{
-						"key": "Cookie",
-						"value": "{{Cookie}}",
-						"type": "text"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "",
@@ -170,16 +197,10 @@
 			],
 			"request": {
 				"method": "PUT",
-				"header": [
-					{
-						"key": "Cookie",
-						"value": "{{Cookie}}",
-						"type": "text"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"username\" : \"Никита Баранов3\"}",
+					"raw": "{\"username\" : \"1\"}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -216,13 +237,7 @@
 			],
 			"request": {
 				"method": "PUT",
-				"header": [
-					{
-						"key": "Cookie",
-						"value": "{{Cookie}}",
-						"type": "text"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\"username\" : \"Никита Баранов\"}",
@@ -262,13 +277,7 @@
 			],
 			"request": {
 				"method": "PUT",
-				"header": [
-					{
-						"key": "Cookie",
-						"value": "{{Cookie}}",
-						"type": "text"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
 					"raw": "{\"password\" : \"1\"}",
@@ -308,16 +317,10 @@
 			],
 			"request": {
 				"method": "PUT",
-				"header": [
-					{
-						"key": "Cookie",
-						"value": "{{Cookie}}",
-						"type": "text"
-					}
-				],
+				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\"password\" : \"GoodPassword\"}",
+					"raw": "{\r\n    \"password\": \"GoodPassword10\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"

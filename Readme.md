@@ -29,4 +29,3 @@
 #### Если требуется изменить тестовые данные, нужно в файле homework10.2.js в переменную students добавить новый массив или изменить текущий.
 
 ![example workflow](https://github.com/NikitaBaranov1992/homework9/blob/master/.github/workflows/blank.yml)
-<a href="https://codeclimate.com/github/codeclimate/codeclimate/maintainability"><img src="https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability" /></a>

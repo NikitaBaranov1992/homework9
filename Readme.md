@@ -28,3 +28,6 @@
 
 #### Если требуется изменить тестовые данные, нужно в файле homework10.2.js в переменную students добавить новый массив или изменить текущий.
 
+### Результат последних тестов:
+
+[![.github/workflows/blank.yml](https://github.com/NikitaBaranov1992/homework9/actions/workflows/blank.yml/badge.svg)](https://github.com/NikitaBaranov1992/homework9/actions/workflows/blank.yml)
